@@ -24,7 +24,7 @@ Prerequisite:
 
 ## Step 3: Customize your identity verification flow
 Your identity verification flow is created with the default setting. You can customize the prests, fields to collect, and styling of the form.
-(insert the video recoding)
+![Watch the video](https://www.screencast.com/t/Nt1ljFtTfbf)
 
 ## Step 3: Start your back-end service
 1. Open a text editor and create a file named `backend.js`.
