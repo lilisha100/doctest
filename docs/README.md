@@ -22,10 +22,10 @@ Trulioo has built several SDKs to assist you in your integration.
    ```
 
 ## Step 2: Create an identity verification experience
-To set up an identity verification, you must first create an EmbedID identity verification experince through the [Trulioo developer portal]https://gateway-admin.trulioo.com/dashboard, which gives you an API key that you can use on your web service back-end and a public key that you can use on your web service front-end.
+To set up an identity verification, you must first create an EmbedID identity verification experince through the [Trulioo developer portal](https://gateway-admin.trulioo.com/dashboard), which gives you an API key that you can use on your web service back-end and a public key that you can use on your web service front-end.
 
-1. Create a free [Trulioo account]https://gateway-admin.trulioo.com/login/signup if you haven't done so.
-1. Log into the [Trulioo developer portal]https://gateway-admin.trulioo.com/dashboard.
+1. Create a free [Trulioo account](https://gateway-admin.trulioo.com/login/signup) if you haven't done so.
+1. Log into the [Trulioo developer portal](https://gateway-admin.trulioo.com/dashboard).
 2. Click **EmbedID** in the left sidebar.
 3. Click **Create New Experience**.
 4. Give it a name, such as "HelloWorld".
@@ -33,9 +33,9 @@ To set up an identity verification, you must first create an EmbedID identity ve
 6. Click **Create** to create a "HelloWorld" identity verification experience.
 
 ## Step 3: Customize your identity verification experience
-Your identity verification experience is created with the default settings. You can customize the presets, fields to collect, and styling of the form as shown in the video below:
+Your identity verification experience is created with the default settings. You can customize the presets, fields to collect, and styling of the form:
 
-<video width="640" height="480" controls>
+<video width="640" height="480" autoplay>
   <source src="customize.mp4" type="video/mp4">
 </video>
 
@@ -54,7 +54,7 @@ Create your web service and start it with node.js.
    app.use(truliooMiddleware) 
    app.listen(port, () => console.log('Example app listening on port 8080!'));
    ```
-3. Go back to the [Trulioo developer portal]https://gateway-admin.trulioo.com/dashboard and click **EmbedID** in the left sidebar.
+3. Go back to the [Trulioo developer portal](https://gateway-admin.trulioo.com/dashboard) and click **EmbedID** in the left sidebar.
 3. Find the “HelloWorld” and click the Edit icon.
 4. In the left sidebar, click to expand the **Keys** section.
 4. Locate the API Key (BE) field and copy your API Key.
@@ -92,7 +92,7 @@ Create your web service and start it with node.js.
      });
    </script>
    ```
-3. Go back to your identity verification experience “HelloWorld” and click the Edit icon.
+3. Go back to your "HelloWorld" identity verification experience and click the edit icon.
 4. In the left sidebar, click to expand the **Keys** section.
 4. Locate the Trial Key (FE) field and copy your Trial Key.
 5. In the `index.html` file, replace `Trial Key (FE)_OR_Live Key (FE)` with your Trial key.
@@ -111,15 +111,16 @@ Create your web service and start it with node.js.
    ```
    GET  https://gateway.trulioo.com/experienceTransaction/{experienceTransactionId}
    ```
-1. Go back to the [Trulioo developer portal]https://gateway-admin.trulioo.com/dashboard and click **Transaction**.
+1. Go back to the [Trulioo developer portal](https://gateway-admin.trulioo.com/dashboard) and click **Transaction**.
 2. From the **Transaction History**, find the transaction that you just made and copy the transaction ID. 
 3. Replace `{experienceTransactionId}` with your transaction ID in your Postman request.
 4. Go back to your dashboard and copy your `x-trulioo-api-key`.
 4. In your Postman request, click the Header tab and add a key `x-trulioo-api-key` with your api-key value.
 5. Click Send.
-   The response body shows the verification response as shown in the video below:
+
+   The response body shows the verification response:
    
-   <video width="640" height="480" controls>
+   <video width="640" height="480" autoplay>
      <source src="verify.mp4" type="video/mp4">
    </video>
    
