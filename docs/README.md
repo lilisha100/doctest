@@ -1,11 +1,16 @@
-# Integrate with Trulioo EmbedID
+# Integrate with Trulioo GlobalGateway EmbedID
+Trulioo's GlobalGateway EmbedID allows you to add identity verification and fraud detection to your digital onboarding process. 
+
+This tutorial shows you the steps to integrate with Trulioo GlobalGateway EmbedID on your localhost.
 
 **Prerequisite**:
-- A Trulioo account (free)
+- A trial Trulioo account (free)
 - Any code or text editor
 - [node.js](https://nodejs.org/en/)
 
 ## Step 1: Install the `trulioo-middleware` SDK
+Trulioo has built several SDKs to assist you in your integration. 
+
 1. In the command line, run the following:
    ```
    npm install trulioo-embedid-middleware
@@ -25,7 +30,7 @@
    A "HelloWorld" identity verification flow is created.
 
 ## Step 3: Customize your identity verification flow
-Your identity verification flow is created with the default setting. You can customize the prests, fields to collect, and styling of the form.
+Your identity verification flow is created with the default settings. You can customize the prests, fields to collect, and styling of the form as shown in the following video:
 
 <video width="960" height="720" controls>
   <source src="customize.mp4" type="video/mp4">
@@ -86,7 +91,7 @@ Your identity verification flow is created with the default setting. You can cus
 4. Locate the Trial Key (FE) field and copy your Trial Key.
 5. In the `index.html` file, replace `Trial Key (FE)_OR_Live Key (FE)` with your Trial key.
 
-## Step 6: We’re done! Let’s try it out
+## Step 6: Make requests with test entities
 1. Open `index.html` in your browser.
 2. You will see your “HelloWorld” identity verification flow appear.
 3. Enter the following information in the form:
@@ -94,4 +99,6 @@ Your identity verification flow is created with the default setting. You can cus
    ![](justin.png)
    
 4. Click **Submmit**.
+
+## Step 7: Get the verification response
 5. Go back to your dashboard, click **Transaction** and you will see a match transaction in the **Transaction History**.
