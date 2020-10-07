@@ -35,7 +35,7 @@ To set up an identity verification, you must first create an EmbedID identity ve
 ## Step 3: Customize your identity verification experience
 Your identity verification experience is created with the default settings. You can customize the presets, fields to collect, and styling of the form as shown in the video below:
 
-<video width="960" height="720" controls>
+<video width="640" height="480" controls>
   <source src="customize.mp4" type="video/mp4">
 </video>
 
@@ -119,7 +119,7 @@ Create your web service and start it with node.js.
 5. Click Send.
    The response body shows the verification response as shown in the video below:
    
-   <video width="960" height="720" controls>
+   <video width="640" height="480" controls>
      <source src="verify.mp4" type="video/mp4">
    </video>
    
