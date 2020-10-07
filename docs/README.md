@@ -1,44 +1,49 @@
 # Integrate with Trulioo GlobalGateway EmbedID
-Trulioo's GlobalGateway EmbedID allows you to add identity verification and fraud detection to your digital onboarding process. 
+Trulioo's GlobalGateway EmbedID allows you to add identity verification and fraut detection to your web application. 
 
-This tutorial shows you the steps to integrate with Trulioo GlobalGateway EmbedID on your localhost.
+This tutorial shows you the steps to integrate your web application with Trulioo GlobalGateway EmbedID for identity verification on your localhost. You can also add document verification or identity and document verifications to your workflow using the same instructions. 
 
-**Prerequisite**:
-- A trial Trulioo account (free)
+**Tools you need**:
+
 - Any code or text editor
 - [node.js](https://nodejs.org/en/)
+- [Postman](https://www.postman.com/)
 
 ## Step 1: Install the `trulioo-middleware` SDK
 Trulioo has built several SDKs to assist you in your integration. 
 
-1. In the command line, run the following:
+1. In the command line, run the following to install the `trulioo-embedid-middleware` SDK:
    ```
    npm install trulioo-embedid-middleware
    ```
-2. The `trulioo-middleware` SDK is an `express` middleware, so you must install `express`:
+2. The `trulioo-middleware` SDK is an `express` middleware, so you also need to install `express`:
    ```
    npm install express
    ```
 
-## Step 2: Create your automated identity verification flow
-1. Go to https://gateway-admin.trulioo.com/dashboard once you are logged in.
+## Step 2: Create an identity verification experience
+To set up an identity verification, you must first create an EmbedID identity verification experince through the [Trulioo developer portal]https://gateway-admin.trulioo.com/dashboard, which gives you an API key that you can use on your web service back-end and a public key that you can use on your web service front-end.
+
+1. Create a free [Trulioo account]https://gateway-admin.trulioo.com/login/signup if you haven't done so.
+1. Log into the [Trulioo developer portal]https://gateway-admin.trulioo.com/dashboard.
 2. Click **EmbedID** in the left sidebar.
 3. Click **Create New Experience**.
-4. Give it a name. Let's go with "HelloWorld.”
+4. Give it a name, such as "HelloWorld".
 5. Select **Identity Verification**.
-6. Click **Create**.
-   A "HelloWorld" identity verification flow is created.
+6. Click **Create** to create a "HelloWorld" identity verification experience.
 
-## Step 3: Customize your identity verification flow
-Your identity verification flow is created with the default settings. You can customize the prests, fields to collect, and styling of the form as shown in the following video:
+## Step 3: Customize your identity verification experience
+Your identity verification experience is created with the default settings. You can customize the presets, fields to collect, and styling of the form as shown in the video below:
 
 <video width="960" height="720" controls>
   <source src="customize.mp4" type="video/mp4">
 </video>
 
 ## Step 4: Start your back-end service
+Create your web service and start it with node.js.
+
 1. Open a text editor and create a file named `backend.js`.
-2. Copy and paste the following code to the `backend.js` file:
+2. Copy and paste the following to the `backend.js` file:
    ```
    const truliooMiddleware = require('trulioo-embedid-middleware')({ 
    apiKey: '<TRULIOO_API_KEY>' }); 
@@ -49,7 +54,8 @@ Your identity verification flow is created with the default settings. You can cu
    app.use(truliooMiddleware) 
    app.listen(port, () => console.log('Example app listening on port 8080!'));
    ```
-3. Go back to your identity verification flow called “HelloWorld” and click the Edit icon.
+3. Go back to the [Trulioo developer portal]https://gateway-admin.trulioo.com/dashboard and click **EmbedID** in the left sidebar.
+3. Find the “HelloWorld” and click the Edit icon.
 4. In the left sidebar, click to expand the **Keys** section.
 4. Locate the API Key (BE) field and copy your API Key.
 5. In the `backend.js` file, replace `<TRULIOO_API_KEY>` with your API key.
@@ -86,19 +92,36 @@ Your identity verification flow is created with the default settings. You can cu
      });
    </script>
    ```
-3. Go back to your identity verification flow called “HelloWorld” and click the Edit icon.
+3. Go back to your identity verification experience “HelloWorld” and click the Edit icon.
 4. In the left sidebar, click to expand the **Keys** section.
 4. Locate the Trial Key (FE) field and copy your Trial Key.
 5. In the `index.html` file, replace `Trial Key (FE)_OR_Live Key (FE)` with your Trial key.
 
-## Step 6: Make requests with test entities
+## Step 6: Make a request with a test entity
 1. Open `index.html` in your browser.
-2. You will see your “HelloWorld” identity verification flow appear.
+   Your “HelloWorld” identity verification form appears.
 3. Enter the following information in the form:
 
    ![](justin.png)
    
-4. Click **Submmit**.
+4. Click **Submit**.
 
 ## Step 7: Get the verification response
-5. Go back to your dashboard, click **Transaction** and you will see a match transaction in the **Transaction History**.
+1. Open Postman and create a GET request:
+   ```
+   GET  https://gateway.trulioo.com/experienceTransaction/{experienceTransactionId}
+   ```
+1. Go back to the [Trulioo developer portal]https://gateway-admin.trulioo.com/dashboard and click **Transaction**.
+2. From the **Transaction History**, find the transaction that you just made and copy the transaction ID. 
+3. Replace `{experienceTransactionId}` with your transaction ID in your Postman request.
+4. Go back to your dashboard and copy your `x-trulioo-api-key`.
+4. In your Postman request, click the Header tab and add a key `x-trulioo-api-key` with your api-key value.
+5. Click Send.
+   The response body shows the verification response as shown in the video below:
+   
+   <video width="960" height="720" controls>
+     <source src="verify.mp4" type="video/mp4">
+   </video>
+   
+
+ 
