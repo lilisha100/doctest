@@ -1,4 +1,4 @@
-# Integrate Your Web Service with Trulioo GlobalGateway EmbedID
+# Integrate Your Web Application with EmbedID
 Trulioo's GlobalGateway EmbedID allows you to add identity verification and fraut detection to your web application. 
 
 This tutorial shows you the steps to integrate your web application with Trulioo GlobalGateway EmbedID for identity verification on your localhost. You can also add document verification or identity and document verifications to your workflow using the same instructions. 
@@ -35,7 +35,7 @@ To set up an identity verification, you must first create an EmbedID identity ve
 ## Step 3: Customize your identity verification experience
 Your identity verification experience is created with the default settings. You can customize the presets, fields to collect, and styling of the form:
 
-<video width="640" height="480" autoplay>
+<video width="960" height="720" controls autoplay>
   <source src="customize.mp4" type="video/mp4">
 </video>
 
@@ -120,7 +120,7 @@ Create your web service and start it with node.js.
 
    The response body shows the verification response:
    
-   <video width="640" height="480" autoplay>
+   <video width="960" height="720" controls autoplay>
      <source src="verify.mp4" type="video/mp4">
    </video>
    
