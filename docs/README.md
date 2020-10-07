@@ -1,5 +1,6 @@
-# Integrate Trulioo EmbedID into Your KYC
-Prerequisite:
+# Integrate with Trulioo EmbedID
+
+**Prerequisite**:
 - A Trulioo account (free)
 - Any code or text editor
 - [node.js](https://nodejs.org/en/)
@@ -13,6 +14,7 @@ Prerequisite:
    ```
    npm install express
    ```
+
 ## Step 2: Create your automated identity verification flow
 1. Go to https://gateway-admin.trulioo.com/dashboard once you are logged in.
 2. Click **EmbedID** in the left sidebar.
@@ -88,6 +90,8 @@ Your identity verification flow is created with the default setting. You can cus
 1. Open `index.html` in your browser.
 2. You will see your “HelloWorld” identity verification flow appear.
 3. Enter the following information in the form:
-   ![](https://www.screencast.com/t/euPHZhxo9)
+
+   ![](justin.png)
+   
 4. Click **Submmit**.
 5. Go back to your dashboard, click **Transaction** and you will see a match transaction in the **Transaction History**.
