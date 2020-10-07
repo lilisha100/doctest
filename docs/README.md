@@ -1,4 +1,4 @@
-# Integrate with Trulioo GlobalGateway EmbedID
+# Integrate Your Web Service with Trulioo GlobalGateway EmbedID
 Trulioo's GlobalGateway EmbedID allows you to add identity verification and fraut detection to your web application. 
 
 This tutorial shows you the steps to integrate your web application with Trulioo GlobalGateway EmbedID for identity verification on your localhost. You can also add document verification or identity and document verifications to your workflow using the same instructions. 
