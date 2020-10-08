@@ -1,7 +1,7 @@
 # Integrate Your Web Application with EmbedID
 Trulioo's GlobalGateway EmbedID allows you to add identity verification and fraut detection to your web application. 
 
-This tutorial shows you the steps to integrate your web application with Trulioo GlobalGateway EmbedID for identity verification on your localhost. You can also add document verification or identity and document verifications to your workflow using the same instructions. 
+This tutorial shows you the steps to integrate your web application with Trulioo GlobalGateway EmbedID for identity verification on your localhost. 
 
 **Tools you need**:
 
@@ -33,7 +33,13 @@ To set up an identity verification, you must first create an EmbedID identity ve
 6. Click **Create** to create a "HelloWorld" identity verification experience.
 
 ## Step 3: Customize your identity verification experience
-Your identity verification experience is created with the default settings. You can customize the presets, fields to collect, and styling of the form:
+Your identity verification experience is created. This generates a user verification form that you can include in your web application. You can customize and try out the verification form before your integration.
+
+1. Go to the [Trulioo developer portal](https://gateway-admin.trulioo.com/dashboard).
+2. Click **EmbedID** in the left sidebar.
+3. Find the “HelloWorld” experience and click the Edit icon.
+4. To customize the form, use the controls in the left sidebar.
+5. To try out the form, click **Save and Preview Experience** and select a test entry.
 
 <video width="960" height="720" controls autoplay>
   <source src="customize.mp4" type="video/mp4">
@@ -55,7 +61,7 @@ Create your web service and start it with node.js.
    app.listen(port, () => console.log('Example app listening on port 8080!'));
    ```
 3. Go back to the [Trulioo developer portal](https://gateway-admin.trulioo.com/dashboard) and click **EmbedID** in the left sidebar.
-3. Find the “HelloWorld” and click the Edit icon.
+3. Find the “HelloWorld” experience and click the Edit icon.
 4. In the left sidebar, click to expand the **Keys** section.
 4. Locate the API Key (BE) field and copy your API Key.
 5. In the `backend.js` file, replace `<TRULIOO_API_KEY>` with your API key.
@@ -65,7 +71,7 @@ Create your web service and start it with node.js.
    ```
    node backend.js
    ```
-   If you see the 'Example app listening on port 8080!' message, you have successfully set up your server!
+   If you see the "Example app listening on port 8080!" message, you have successfully set up your server!
    
 ## Step 5: Set up your front-end HTML
 1. Open a text editor and create a file named `index.html`.
