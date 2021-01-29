@@ -1,5 +1,5 @@
 # Integrate Your Web Application with EmbedID
-Trulioo's GlobalGateway EmbedID allows you to add identity verification and fraut detection to your web application. 
+Trulioo's GlobalGateway EmbedID allows you to add identity verification and fraud detection to your web application. 
 
 This tutorial shows you the steps to integrate your web application with Trulioo GlobalGateway EmbedID for identity verification on your localhost. This tutorial is intended for people who are familiar with node.js, HTML, REST API, web services, and comfortable running commands in a command-line interface.
 
@@ -22,7 +22,7 @@ Trulioo has built several SDKs to assist you in your integration.
    ```
 
 ## Step 2: Create an identity verification experience
-To set up an identity verification, you must first create an EmbedID identity verification experince through the [Trulioo developer portal](https://gateway-admin.trulioo.com/dashboard), which gives you an API key that you can use on your web service back-end and a public key that you can use on your web service front-end.
+To set up an identity verification, you must first create an EmbedID identity verification experience through the [Trulioo developer portal](https://gateway-admin.trulioo.com/dashboard), which gives you an API key that you can use on your web service back-end and a public key that you can use on your web service front-end.
 
 1. Create a free [Trulioo account](https://gateway-admin.trulioo.com/login/signup) if you haven't done so.
 1. Log into the [Trulioo developer portal](https://gateway-admin.trulioo.com/dashboard).
@@ -65,7 +65,7 @@ Create your web service and start it with node.js.
 4. In the left sidebar, click to expand the **Keys** section.
 4. Locate the API Key (BE) field and copy your API Key.
 5. In the `backend.js` file, replace `<TRULIOO_API_KEY>` with your API key.
-6. Save your `backend.js` file to a desired location.
+6. Save your `backend.js` file to the desired location.
 7. In the command line, go to the location where your `backend.js` file is saved.
 8. Run the following to start your server:
    ```
@@ -129,6 +129,3 @@ Create your web service and start it with node.js.
    <video width="960" height="720" controls autoplay>
      <source src="verify.mp4" type="video/mp4">
    </video>
-   
-
- 
